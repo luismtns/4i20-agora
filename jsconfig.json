@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2017",
+    "allowSyntheticDefaultImports": false,
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["./src/*"],
+      "@components/*": ["./src/components/*"],
+      "@config/*": ["./src/config/*"],
+      "@containers/*": ["./src/containers/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@data/*": ["./src/data/*"],
+      "@forms/*": ["./src/forms/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@third-party/*": ["./src/third-party/*"],
+      "@services/*": ["./src/services/*"],
+      "@views/*": ["./src/views/*"],
+      "@globalConfig/*": ["./config/*"]
+    }
+  },
+  "exclude": ["node_modules", "build"]
+}

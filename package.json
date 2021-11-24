@@ -1,0 +1,83 @@
+{
+  "name": "4i20-agora",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf build && NODE_ENV=production APP_ENV=production ./node_modules/.bin/webpack -p",
+    "start": "APP_ENV=development ./node_modules/.bin/webpack-dev-server"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-transform-object-assign": "^6.22.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.8",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.6",
+    "html-webpack-plugin": "^2.30.1",
+    "json-loader": "^0.5.7",
+    "node-sass": "^6.0.1",
+    "prop-types": "^15.6.0",
+    "sass-loader": "^6.0.6",
+    "sass-resources-loader": "^1.3.1",
+    "style-loader": "^0.19.1",
+    "uglifyjs-webpack-plugin": "^1.1.6",
+    "url-loader": "^0.6.2",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.1"
+  },
+  "dependencies": {
+    "axios": "^0.21.4",
+    "classnames": "^2.3.1",
+    "connected-react-router": "^6.9.1",
+    "dayjs": "^1.10.7",
+    "history": "^4.10.1",
+    "js-sha1": "^0.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "react": "^17.0.2",
+    "react-dayjs": "^0.3.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "7.2.5",
+    "react-router-dom": "^5.3.0",
+    "react-toastify": "^8.0.2",
+    "redux": "^4.1.1",
+    "redux-form": "8.3.7",
+    "redux-thunk": "^2.2.0",
+    "regenerator-runtime": "^0.13.9",
+    "reset-css": "^5.0.1",
+    "uuid": "^8.3.2"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0",
+      "react"
+    ],
+    "plugins": [
+      "transform-object-assign",
+      [
+        "module-resolver",
+        {
+          "alias": {
+            "@app": "./src",
+            "@components": "./src/components",
+            "@config": "./src/config",
+            "@containers": "./src/containers",
+            "@data": "./src/data",
+            "@utils": "./src/utils",
+            "@services": "./src/services",
+            "@views": "./src/views",
+            "@forms": "./src/forms",
+            "@globalConfig": "./config"
+          }
+        }
+      ]
+    ]
+  }
+}
